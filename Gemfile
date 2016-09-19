@@ -39,7 +39,7 @@ end
 group:test do
 
   gem 'rspec-rails', '~> 3.5'
-
+  gem 'database_cleaner'
   gem 'capybara', '~> 2.8.1'
 
 end
