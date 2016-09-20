@@ -8,7 +8,7 @@ feature 'Users' do
 
   scenario 'returns to home page once logged out' do
     sign_up
-    click_button('sign out')
+    click_link('Logout')
     expect(page).to have_content('You need to sign in')
   end
 end

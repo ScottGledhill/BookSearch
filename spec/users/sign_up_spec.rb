@@ -8,6 +8,8 @@ feature 'Users' do
 
   scenario 'can not sign up with same username' do
     sign_up
+    click_link('Logout')
+    sign_up
     expect(page).to have_content('Email has already been taken')
   end
 
