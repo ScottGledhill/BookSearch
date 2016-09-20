@@ -15,3 +15,12 @@ def sign_up_different_password_and_password_confirmation
   fill_in('Password confirmation', :with => '222222')
   click_button('Sign up')
 end
+
+def sign_up_new_account
+  visit 'users#index'
+  click_link('Sign up')
+  fill_in('Email', :with => '1@22221.3.com')
+  fill_in('Password', :with => '111111')
+  fill_in('Password confirmation', :with => '111111')
+  click_button('Sign up')
+end

@@ -5,4 +5,10 @@ feature 'Users' do
     visit 'users#index'
     expect(page).to have_content('You need to sign in')
   end
+
+  scenario 'returns to home page once logged out' do
+    sign_up
+    click_button('sign out')
+    expect(page).to have_content('You need to sign in')
+  end
 end
