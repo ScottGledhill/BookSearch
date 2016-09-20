@@ -6,8 +6,4 @@ class UsersController < ApplicationController
   def show
     render :logged_in
   end
-
-  def delete
-    redirect('users/sign_in')
-  end
 end
