@@ -3,7 +3,6 @@ require 'rails_helper'
 feature 'Users' do
   scenario 'can log in' do
     sign_up_new_account
-    save_and_open_page
     click_link('Logout')
     fill_in('Email', :with => '1@22221.3.com')
     fill_in('Password', :with => '111111')
