@@ -4,7 +4,12 @@
 <form class="searchbox" action="users#new" method="get">
   <label for=":q"> <input id="q" placeholder="Search for a book.." name="q" type="text">
   </form>
-  
+
+   <div class="searchterm">
+     <section id="cg"> <%= @api.search_result %> <br/>
+     </div>
+
+
 <% if user_signed_in? %>
   <li>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
