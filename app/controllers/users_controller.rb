@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def index
-    @params = 'Harry+Potter'
     render :index
   end
 
