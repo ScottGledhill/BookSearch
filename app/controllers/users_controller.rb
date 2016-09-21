@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
   def index
-    render :index
-  end
-
-  def show
-    render :logged_in
+    if params.include?(:q)
+      api_search
+      render :index
+    end
   end
 
   def api_search
-    p ApiSearch.call
+    api = ApiSearch.new
+    api.call(params)
   end
 end
