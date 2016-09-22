@@ -1,12 +1,11 @@
 
 
-<div id="gradient"></div>
-<form class="searchbox" action="users#new" method="get">
-  <label for=":q"> <input id="q" placeholder="Search for a book.." name="q" type="text">
-  </form>
-  
 <% if user_signed_in? %>
   <li>
+    <div id="gradient"></div>
+    <form class="searchbox" action="users#new" method="get">
+      <label for=":q"> <input id="q" placeholder="Search for a book.." name="q" type="text">
+      </form>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
   </li>
 <% else %>

@@ -2,8 +2,17 @@ class ApiSearch < ApplicationRecord
 
   def call(params)
     @params = params[:q]
-    @titles = JSON.parse(search_result)["items"].collect { |item| item["volumeInfo"]["title"] }
+  end
+
+  def titles
+    p @titles = JSON.parse(search_result)["items"].collect { |item| item["volumeInfo"]["title"] }
+  end
+
+  def authors
     @authors = JSON.parse(search_result)["items"].collect { |item| item["volumeInfo"]["authors"] }
+  end
+
+  def descriptions
     @descriptions = JSON.parse(search_result)["items"].collect { |item| item["volumeInfo"]["description"] }
   end
 
